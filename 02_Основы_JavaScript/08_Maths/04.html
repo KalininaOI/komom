@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let a = prompt("Первое число?", 1);
+    let b = prompt("Второе число?", 2);
+
+    alert(+a + +b); // было 12 должно быть 3. Ввриант простой и правильный
+
+    alert(-(-a - b)); // было 12 должно быть 3. Вариант странный, но правильный
+
+    let num1 = Number(a);
+    let num2 = Number(b);
+    alert(num1 + num2); // было 12 должно быть 3. Вариант извращенный :)
+</script>
+</body>
+</html>
