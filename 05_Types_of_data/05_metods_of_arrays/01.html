@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function camelize(str) {
+        let arr = str.split ('-');
+        let newarr = arr.map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1));
+        return newarr.join('');
+
+    }
+// почему загламными становятся слова, перед которыми -? где на это указание? почему работает так?
+    // это как-то зависит от того, что в последнем варианте первое слово становится первым, а не нулевым?
+    alert(camelize("background-color"));
+    alert(camelize("list-style-image"));
+    alert(camelize("-webkit-transition"));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let styles = ['Джаз', 'Блюз']; // Создайте массив styles с элементами «Джаз» и «Блюз».
+    alert(styles);
+
+    styles.push("Рок-н-Ролл"); // Добавьте «Рок-н-ролл» в конец.
+    alert(styles);
+
+    styles [ Math.floor(styles.length / 2) ] = 'Классика'; // Замените значение в середине на «Классика». Ваш код для поиска значения в середине должен работать для массивов с любой длиной.
+    alert(styles);
+
+    alert(styles.shift() ); // Удалите первый элемент массива и покажите его.
+    alert(styles);
+
+    styles.unshift("Рэп", "Регги"); // Вставьте «Рэп» и «Регги» в начало массива.
+    alert(styles);
+</script>
+</body>
+</html>

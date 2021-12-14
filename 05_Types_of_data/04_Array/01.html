@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let fruits = ["Яблоки", "Груша", "Апельсин"];
+
+    // добавляем новое значение в "копию"
+    let shoppingCart = fruits;
+    shoppingCart.push("Банан");
+
+    // что в fruits?
+    alert( fruits.length ); // 4 т.к. обе переменные являются ссылками на один и тот же массив
+
+</script>
+</body>
+</html>
