@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+   function filterRange(arr, a, b) {
+       newarr = arr.slice((a + 1) , b);
+       return newarr;
+   }
+
+    let arr = [5, 3, 8, 1];
+    let filtered = filterRange(arr, 1, 4);
+
+    alert( filtered ); // 3,1 (совпадающие значения)
+   // это написано в примере задания. а вот судя по тексту задания, должны выводиться
+   // зачения между 1ой и 4ой позицией. вообще, глобально,это 8 и 1. почем там 3 и 1 хз
+   // я сделала так, как поняла задание
+    alert( arr ); // 5,3,8,1 (без изменений)
+
+</script>
+</body>
+</html>
