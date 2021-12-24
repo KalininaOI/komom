@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function aclean(arr) {
+        let map = new Map();
+
+        for (let word of arr) {
+            let sorted = word.toLowerCase().split("").sort().join("");
+            // каждое слово переписываем в нижнем регистре
+            // затем превращаем в отдельные буквы
+            // сортируем по афавиту
+            // превращаем обратно в слово
+            map.set(sorted, word);
+            // добавляем ключу-отсортированному по буквам слову значение исходного слова
+            // если встретится анаграмма, то значение ключа просто перезапишется
+        }
+
+        return Array.from(map.values());
+    }
+
+    let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+    alert( aclean(arr) );
+
+</script>
+</body>
+</html>
