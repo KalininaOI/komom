@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function getSecondsToday() {
+        let now = new Date();
+        return now.getSeconds() + now.getMinutes() * 60 + now.getHours() * 3600;
+    }
+
+    alert(getSecondsToday());
+
+</script>
+</body>
+</html>
