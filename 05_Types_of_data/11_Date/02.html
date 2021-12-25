@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function getWeekDay(date){
+        if (date.getDay() == 0) {
+            return 'ВС';
+        } else if (date.getDay() == 1) {
+            return 'ПН';
+        } else if (date.getDay() == 2) {
+            return 'ВТ';
+        } else if (date.getDay() == 3) {
+            return 'СР';
+        } else if (date.getDay() == 4) {
+            return 'ЧТ';
+        } else if (date.getDay() == 5) {
+            return 'ПТ';
+        } else if (date.getDay() == 6) {
+            return 'СБ';
+        }
+    }
+
+    let date = new Date(2012, 0, 3);  // 3 января 2012 года
+    alert( getWeekDay(date) );        // нужно вывести "ВТ"
+
+</script>
+</body>
+</html>
