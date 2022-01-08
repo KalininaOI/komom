@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function makeArmy() {
+        let shooters = [];
+        for(let i = 0; i < 10; i++) { // заменили while на for, чтобы у i было новое лексическое окружение, а не только 10, как изначально
+            let shooter = function() { // функция shooter
+                alert( i ); // должна выводить порядковый номер
+            };
+            shooters.push(shooter);
+        }
+        return shooters;
+    }
+
+    let army = makeArmy();
+
+    army[0](); // 0
+    army[5](); // 5
+
+</script>
+</body>
+</html>
