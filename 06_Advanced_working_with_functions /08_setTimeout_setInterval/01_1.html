@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // через реурсивный setTimeout
+    function printNumbers(from, to) {
+        let current = from;
+
+        setTimeout(function go() {
+            alert(current);
+            if (current < to) {
+                setTimeout(go, 1000);
+            }
+            current++;
+        }, 1000);
+    }
+
+    // использование:
+    printNumbers(5, 10);
+
+</script>
+</body>
+</html>
