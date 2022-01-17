@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function Rabbit() {}
+    Rabbit.prototype = {
+        eats: true
+    };
+
+    let rabbit = new Rabbit();
+
+    Rabbit.prototype.eats = false; // новая строка
+
+    alert( rabbit.eats ); // false
+    // Объекты присваиваются по ссылке.
+    // Не создаётся копия Rabbit.prototype, это всегда один объект,
+    // на который ссылается и Rabbit.prototype, и [[Prototype]] объекта rabbit.
+    // Таким образом, когда мы изменяем этот объект по одной ссылке, изменения видны и по другой.
+</script>
+</body>
+</html>

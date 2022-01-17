@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function Rabbit() {}
+    Rabbit.prototype = {
+        eats: true
+    };
+
+    let rabbit = new Rabbit();
+
+    delete rabbit.eats; // новая строка
+
+    alert( rabbit.eats ); // true
+    // Операция delete применяется к свойствам конкретного объекта, на котором она вызвана.
+    // Здесь delete rabbit.eats пытается удалить свойство eats из объекта rabbit, но его там нет.
+    // Таким образом, просто ничего не произойдёт.
+
+</script>
+</body>
+</html>

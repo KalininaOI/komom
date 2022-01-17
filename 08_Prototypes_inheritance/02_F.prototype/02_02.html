@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function User(name) {
+    this.name = name;
+  }
+  User.prototype = {}; // добавили значение User.prototype – это пустой объект {}
+
+  let user = new User('John');
+  let user2 = new user.constructor('Pete');
+
+  alert( user2.name ); // undefined, т.к. User.prototype – это пустой объект {}
+</script>
+</body>
+</html>

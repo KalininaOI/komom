@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function User(name) {
+        this.name = name;
+    }
+
+    let user = new User('John');
+    let user2 = new user.constructor('Pete');
+
+    alert( user2.name ); // Pete - так работает,т.к. потому что User.prototype.constructor === User
+</script>
+</body>
+</html>

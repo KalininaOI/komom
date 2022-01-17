@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function Rabbit() {}
+    Rabbit.prototype = {
+        eats: true
+    };
+
+    let rabbit = new Rabbit();
+
+    Rabbit.prototype = {}; // новая строка
+
+    alert( rabbit.eats ); // true
+    // Присвоение нового значения свойству Rabbit.prototype
+    // влияет на [[Prototype]] вновь создаваемых объектов,
+    // но не на прототип уже существующих.
+
+
+
+</script>
+</body>
+</html>

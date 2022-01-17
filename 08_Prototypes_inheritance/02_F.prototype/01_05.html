@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function Rabbit() {}
+    Rabbit.prototype = {
+        eats: true
+    };
+
+    let rabbit = new Rabbit();
+
+    delete Rabbit.prototype.eats; // новая строка
+
+    alert( rabbit.eats ); // undefined.
+    //Свойство eats удалено из прототипа, оно больше не существует.
+
+</script>
+</body>
+</html>
