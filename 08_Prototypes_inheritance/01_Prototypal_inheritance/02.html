@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let head = {
+        glasses: 1
+    };
+
+    let table = {
+        pen: 3,
+        __proto__: head
+    };
+
+    let bed = {
+        sheet: 1,
+        pillow: 2,
+        __proto__: table
+    };
+
+    let pockets = {
+        money: 2000,
+        __proto__: bed
+    };
+
+    alert(pockets.pen);
+    alert(bed.glasses);
+
+    // как быстрее получить значение glasses – через pockets.glasses или через head.glasses?
+    // При необходимости составьте цепочки поиска и сравните их.
+
+    //Ответ:
+    //С точки зрения производительности, для современных движков неважно, откуда берётся свойство – из объекта или из прототипа.
+    // Они запоминают, где было найдено свойство, и повторно используют его в следующем запросе.
+
+
+
+
+
+</script>
+</body>
+</html>

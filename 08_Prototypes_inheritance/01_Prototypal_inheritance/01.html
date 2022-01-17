@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let animal = {
+    jumps: null
+  };
+  let rabbit = {
+    __proto__: animal,
+    jumps: true
+  };
+
+  alert( rabbit.jumps ); // true т.к. берется непосредственно из rabbit
+
+  delete rabbit.jumps; // свойство из rabbits удаляется
+
+  alert( rabbit.jumps ); // null, т.к теперь берется из animal
+
+  delete animal.jumps; // свойство удаляется теперь и из animal
+
+  alert( rabbit.jumps ); // undefined т.к. теперь нет такого свойства - все удалили
+
+</script>
+</body>
+</html>
