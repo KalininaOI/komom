@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Rabbit(name) {
+        this.name = name;
+    }
+    Rabbit.prototype.sayHi = function() {
+        alert(this.name);
+    };
+
+    let rabbit = new Rabbit("Rabbit");
+
+    rabbit.sayHi(); // Rabbit сработает непосредственно
+    Rabbit.prototype.sayHi(); // undefined просто вызовет функцию, у которой this ссылается на объект
+    Object.getPrototypeOf(rabbit).sayHi(); // undefined - тоже ссылается на объект
+    rabbit.__proto__.sayHi(); // undefined - и тут
+</script>
+</body>
+</html>
