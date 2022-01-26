@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let promise = new Promise(function(resolve, reject) {
+        resolve(1);
+
+        setTimeout(() => resolve(2), 1000);
+    });
+
+    promise.then(alert);
+
+    // выведет только 1 (первый resolve), последующий - 2 - будет проигнорирован
+</script>
+</body>
+</html>
