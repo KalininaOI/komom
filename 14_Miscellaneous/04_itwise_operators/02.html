@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function isInteger(num) {
+        let numO = (num ^ 0);
+        if (numO === num) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    alert( isInteger(1) ); // true
+    alert( isInteger(1.5) ); // false
+    alert( isInteger(-0.5) ); // false
+</script>
+</body>
+</html>
